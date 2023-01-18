@@ -1,0 +1,67 @@
+1 -ReactJS is a JavaScript library used for building user interfaces in web apps and mobile apps.
+It was created by Facebook in 2011 and then made open source in 2013.
+
+2- ReactJS or React is a client side UI library developed and maintained by Facebook.
+Currently Facebook uses React for many parts of its website.
+
+3- Unlike Angular which is a framework, React is a library.
+
+4-A framework is full fledged solution for the different aspects of application development. 
+A library on the other hand covers only a small part of the big picture and satisfies a specific requirement alone.
+Therefore we can use different libraries for different parts of the application. 
+
+5- React specifically caters to only two things: Rendering elements on the page efficiently and handling events. 
+For everything else, we would have to write our own code or use other libraries. 
+The below diagram shows the different needs of a typical complex front end application and which parts of it
+are covered by React.
+
+6- Some of the key features of React are:
+Lightweight and easy to use
+
+High performance DOM manipulation
+
+The data passed around is immutable and thus increases performance and reduces bugs
+
+Gives the flexibility to use other libraries
+
+Uses JavaScript instead of TypeScript
+
+It manages the state of the UI and updates only specific portions of the DOM
+
+So the key advantages are: Flexibility (Choice), Lightweight and High Performance .
+
+
+7 - React being a library also has its own disadvantages. Choice is not always a good thing! for example,
+
+React cannot be used for the entire front-end development
+
+One may have to depend on other libraries
+
+Choosing between multiple libraries can be difficult
+
+8 - One of the key features of React is its use of Virtual DOM. This makes React very fast!
+
+9- What is Virtual DOM?
+DOM is the tree representation of the various elements in an HTML page. When the browser receives an HTML 
+page, it does the below steps:
+
+Parses the HTML content
+Creates the DOM structure
+The position and layout is calculated
+The DOM structure is painted on the browser
+
+10- Whenever a DOM element changes, the browser re-calculates the position of the that element and its 
+children elements and repaints them again.This is a costly process.
+
+Imagine, if we have thousand DOM elements, then the re-positioning and re-painting operation done thousand times is a slow process.
+React simplifies it to a great extent using a Virtual DOM.
+
+11 - 	
+Optimization: React is lightweight as it manages the state of the UI and updates only specific portions of the DOM,
+using the concept of Virtual DOM.
+
+
+12 - create a react app 
+- first check npm is installed or not ? if not then first install  
+- create first react app using npm install -g create-react-app
+- 
