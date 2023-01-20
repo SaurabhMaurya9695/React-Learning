@@ -1,0 +1,78 @@
+Creating react app
+
+1-first check with node -v
+2-connect with infosys network
+3-npm install -g create-react-app
+4-create-react-app my-app
+5- now start you app by npm start
+6- our program is executed from  src/index.js 
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);​​​​​​​
+
+7-ReactDOM.render is used to render an element or component to the virtual DOM.
+
+The first argument specifies what needs to be rendered
+The second argument specifies where to render.
+The root element is present inside index.html
+
+8- <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+</body>
+
+9- i can also render using 
+ReactDOM.render(<h1>Hello React!<h1/>, document.getElementById('root'));
+
+10-React.StrictMode, component does not render any visible UI
+
+11- if you work with db.json for that you need to run this file by using command 
+json-server --watch db.json --port 4000
+
+12 - A React component is the fundamental unit of any React application. They are capable of encapsulating data and view as a single unit.
+ These components can work in conjunction with each other.
+Components make code reusable, testing easy, and can take care of separation of concerns.
+The capability of creating own components is a major productivity boost to any web application development. 
+Here, in ReactJS, components reside in virtual DOM and these components will be available as nodes in actual DOM.
+
+``````````````````````````````````````````````````````````````````````````````````````````````````````````````````````````
+                                        How to create a React component?
+13 - There are 2 types of components that can be created in React
+1. Class based components
+2. Functional components
+In this course, you will be learning about functional components
+
+14- Functional Components
+•    Created as a simple JavaScript function
+•    It just returns the HTML elements
+The functional component can be created as follows:
+
+import React from 'react';
+function App() {
+    return React.createElement("h1", {}, "Hello World!!!");
+}
+export default App;
+ 
+
+App - The component name should be in Pascal Casing
+React.createElement - helps to create an element in plain JavaScript
+
+15 - To display elements of a component, the component must be rendered.
+For rendering a component, ReactDOM.render method is used as follows:
+Syntax:
+ReactDOM.render(<parameter 1/>, parameter 2); 
+ReactDOM.render method will take 2 parameters:
+
+'parameter 1' is the name of the component to be rendered
+'parameter 2' is the HTML node reference where the component to be rendered
+ 
+16 - 1. React allows developers to create 2 types of components
+     a. Class components
+     b. Functional components
+2. Functional components are javascript functions which returns HTML elements using React.createElement method
+3. The component can be rendered to the DOM using ReactDOM.render method
+
+
