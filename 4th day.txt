@@ -1,0 +1,85 @@
+				// Why Props and State?
+
+1 - What is State?
+State is a JavaScript object used to manage the data of an application
+To associate state with components you can use useState hook
+
+2 - const [count, setCount] = useState(0); 
+useState() is a function which takes ‘initialState’ as the initial value for any state variable and returns 2 values.
+In the above code snippet, count is a state variable which is initialized with value 0 and setCount is the function 
+used to update the state count 
+
+3 - 
+//   import {useState} from 'react';
+// function App() {
+//   const [name,setName] = useState("Jack")
+//  const handler = ()=>{
+//   setName("Saurabh");
+// }
+//   return (
+//     <div>
+//       Your Name is: {name}<br/>
+//       <button onClick={handler}>Change</button>
+//     </div>
+//   );
+// }
+// export default App;
+
+4 -Key points to be remembered while handling data in a component:
+States are mutable 
+They are reserved for interactivity. The component's event handlers may update the state and trigger a UI update
+The state will be set with a default value when component mounts and will mutate in time based on user events 
+generated
+
+5 - import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+const Employees = () => {
+  const [employees, setEmployees] = useState([
+    { empId: 1234, name: "John", designation: "SE" },
+    { empId: 4567, name: "Tom", designation: "SSE" },
+    { empId: 8910, name: "Kevin", designation: "TA" },
+  ]);
+  const addEmployee = () => {
+    setEmployees([
+      ...employees,    ///////-> this line ans these ... is important to update the values in employeees
+      { empId: 6789, name: "Sam", designation: "TL" },
+    ]);
+  };
+  return (
+    <>
+      <table style={{ width: "60%" }} className="table">
+        <thead className="thead-light">
+          <tr>
+            <th>EmpID</th>
+            <th>Name</th>
+            <th>Designation</th>
+          </tr>
+        </thead>
+        <tbody>
+          {employees.map((employee) => {
+            return (
+              <tr>
+                <td>{employee.empId}</td>
+                <td>{employee.name}</td>
+                <td>{employee.designation}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+      <button className="btn btn-primary" onClick={addEmployee}>Add an Employee</button>
+    </>
+  );
+}
+export default Employees;
+
+				//How to use props
+
+6 - When you want to pass data from parent component to child component, it can be achieved using props.
+How to pass and access props?
+<App data= {10} />
+Here, the property 'data' with a value '10' is passed to the component App.
+The props are passed as arguments to functional components and can be accessed within the components as shown below..
+
+
+
